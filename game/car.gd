@@ -1,6 +1,6 @@
 class_name Car extends RigidBody2D
 
-@export var rotation_speed: float = 1
+@export var rotation_speed: float = 3
 @export var power : float = 5000
 
 var target_rot : float
@@ -19,4 +19,4 @@ func _process(_delta: float) -> void:
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void :
-	rotation = lerp_angle(rotation, rotation + Vector2(input_dir.x,0).angle(), rotation_speed * state.step)
+	rotation += input_dir.x * rotation_speed * state.step
