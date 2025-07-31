@@ -1,15 +1,8 @@
-extends Node
+class_name PlayerInputComponent extends Node
 
-@export var acceleration := 2.0
-@export var turn_speed := 5.0
+signal direction_changed(direction: Vector2)
 
-@onready var body: CharacterBody2D = get_parent()
-
-
-func _physics_process(delta):
-	var input = Input.get_vector("move_left", "move_right", "move_down", "move_up")
+func _physics_process(_delta: float) -> void:
+	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
-	body.rotation += input.x * turn_speed * delta * input.y
-	body.velocity += body.transform.x * acceleration * input.y
-	
-	body.move_and_slide()
+	direction_changed.emit(direction)

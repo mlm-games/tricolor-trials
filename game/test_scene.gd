@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var car: RigidBody2D = $Car
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("Entered, change loop!")
+func _on_finish_line_body_entered(body: Node2D) -> void:
+	print(body, "Entered, change loop!")
+	car.modulate = Color.YELLOW_GREEN

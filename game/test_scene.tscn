@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://babefhxnseam6"]
+[gd_scene load_steps=7 format=4 uid="uid://babefhxnseam6"]
 
 [ext_resource type="TileSet" uid="uid://ci4yy6s854qm2" path="res://game/assets/test-arena-tileset.tres" id="1_duoxe"]
 [ext_resource type="Script" uid="uid://08vjua16nxa0" path="res://game/test_scene.gd" id="1_fgq61"]
-[ext_resource type="Script" uid="uid://p0grr10rsqv7" path="res://game/scripts/car_handler.gd" id="2_p6i20"]
-[ext_resource type="Texture2D" uid="uid://dvyhmu6cvljqn" path="res://game/assets/art/temp_art/car.svg" id="3_84kc0"]
+[ext_resource type="PackedScene" uid="uid://tmnv6gwts5ed" path="res://game/scenes/bodies/car.tscn" id="3_84kc0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_84kc0"]
 size = Vector2(20, 98)
@@ -22,28 +21,21 @@ tile_set = ExtResource("1_duoxe")
 
 [node name="Decorations" type="TileMapLayer" parent="."]
 
-[node name="Car" type="CharacterBody2D" parent="."]
+[node name="Car" parent="." instance=ExtResource("3_84kc0")]
 position = Vector2(136, 241)
-scale = Vector2(0.55726874, 0.4278634)
 
-[node name="CarHandler" type="Node" parent="Car"]
-script = ExtResource("2_p6i20")
-metadata/_custom_type_script = "uid://p0grr10rsqv7"
-
-[node name="Sprite2D" type="Sprite2D" parent="Car"]
-texture = ExtResource("3_84kc0")
-
-[node name="Area2D" type="Area2D" parent="."]
+[node name="FinishLine" type="Area2D" parent="."]
 position = Vector2(498, 224)
+collision_mask = 2
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_84kc0")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="FinishLine"]
 position = Vector2(3.8146973e-06, 0.5)
 scale = Vector2(0.109375015, 103)
 texture = SubResource("GradientTexture1D_5o7fs")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="FinishLine" to="." method="_on_finish_line_body_entered"]
