@@ -12,7 +12,7 @@ config_version=5
 
 config/name="<PlaceHolderName>"
 run/main_scene="uid://ddl5roo03rvdl"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/bg_color=Color(0.0924416, 0.147392, 0.187741, 1)
 config/icon="res://icon.svg"
 
@@ -28,6 +28,7 @@ PauseMenu="*res://addons/my-ecosystem-template/pause-menu/pause_menu.tscn"
 LayerNames="*res://addons/layer_names/generated/layer_names.gd"
 A="*res://game/scenes/autoloads/autoload.tscn"
 DebugShortcutsManager="*res://addons/my-ecosystem-template/managers/debug_shortcuts_manager.gd"
+BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
 
 [display]
 
@@ -35,7 +36,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/basic_settings_menu/plugin.cfg", "res://addons/layer_names/plugin.cfg")
+enabled=PackedStringArray("res://addons/basic_settings_menu/plugin.cfg", "res://addons/better-terrain/plugin.cfg", "res://addons/layer_names/plugin.cfg")
 
 [input]
 
@@ -66,6 +67,12 @@ locale/translations=PackedStringArray("res://locale/translations.ar.translation"
 2d_render/layer_10="GameBounds"
 2d_physics/layer_1="World"
 2d_navigation/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Red"
+2d_physics/layer_4="Green"
+2d_physics/layer_5="Blue"
+2d_physics/layer_6="Obstacles"
+2d_physics/layer_7="Interactables"
 2d_physics/layer_10="GameBounds"
 2d_navigation/layer_10="GameBounds"
 
