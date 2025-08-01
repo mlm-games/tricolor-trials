@@ -1,30 +1,34 @@
-class_name BaseCar extends RigidBody2D
+class_name BaseCar extends CharacterBody2D
 
-static var I:Car
+static var I : BaseCar
 
 func _init() -> void:
 	I = self
 
-@export var rotation_speed: float = 3
-@export var power : float = 7000
+@export var friction := 10.0 # Physics material friction is not for top down games
+@export var boost_impulse := 1000.0
+@export var wheelbase := 20.0
+@export var max_steer := 0.5  # radians
+@export var engine_power := 800.0
 
+var steer_angle := 0.0
+var is_boost_charged := false
+var autopilot := false
+var is_boosting := false
 var target_rot : float
-var input_dir : Vector2 = Vector2.ZERO
 var last_dir : Vector2 = Vector2.RIGHT
+var max_speed := 500.0
 
 @onready var initial_position = global_position
-@onready var car_handler: PlayerInputComponent = %CarHandler
+@onready var car_handler: PlayerCarHandler = %CarHandler
 
 
 func _ready() -> void:
-	car_handler.direction_changed.connect(func(dir): input_dir = dir)
-
-
-func _integrate_forces(state: PhysicsDirectBodyState2D) -> void :
-	apply_central_force(transform.x * power * -input_dir.y)
-	rotation += input_dir.x * rotation_speed * state.step
+	reset_car_pos()
 
 
 
-func reset_car():
+
+
+func reset_car_pos():
 	global_position = initial_position

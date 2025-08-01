@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo086dksygiec"]
+
+[ext_resource type="Script" uid="uid://bf5mukorp6nx8" path="res://game/scenes/levels/block_remover_button.gd" id="1_e077t"]
+[ext_resource type="Texture2D" uid="uid://iid5buh1t5j5" path="res://addons/better-terrain/icons/paint-symmetry/SymmetryAll.svg" id="2_u2wvn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcijt"]
+
+[node name="BlockRemoverButton" type="Area2D" node_paths=PackedStringArray("connected_blocker")]
+visible = false
+collision_mask = 2
+script = ExtResource("1_e077t")
+connected_blocker = NodePath("")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tcijt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_u2wvn")

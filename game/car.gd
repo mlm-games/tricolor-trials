@@ -1,6 +1,6 @@
-class_name Car extends RigidBody2D
+class_name OldCar extends RigidBody2D
 
-static var I:Car
+static var I:OldCar
 
 func _init() -> void:
 	I = self

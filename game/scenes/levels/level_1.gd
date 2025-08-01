@@ -4,13 +4,14 @@ class_name Level1 extends BaseLevel
 
 func _ready() -> void:
 	FinishLine.I.crossed.connect(line_crossed)
+	change_color() # To reset all collisions initially
 
 func line_crossed():
 	if loops_to_win == 0:
 		print("level_over")
 	
 	loops_to_win -= 1
-	Car.I.reset_car()
+	BaseCar.I.reset_car_pos()
 	change_color()
 
 func change_color():

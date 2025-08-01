@@ -5,6 +5,7 @@
 
 [node name="Level1" instance=ExtResource("1_5s5qv")]
 script = ExtResource("2_q3w70")
+loops_to_win = null
 color_order = Array[int]([0, 1])
 
 [node name="LevelArea" parent="." index="0"]

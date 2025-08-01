@@ -10,5 +10,5 @@ func _init() -> void:
 @onready var tilemaps :  = get_children().filter(func(c): return c is LevelTileMap)
 
 func _ready() -> void:
-	FinishLine.I.crossed.connect(func(_b): print_tree())
+	FinishLine.I.crossed.connect(print_tree)
 	

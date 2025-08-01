@@ -43,3 +43,15 @@ position = Vector2(193, 252)
 [node name="FinishLine" parent="." instance=ExtResource("3_lldw8")]
 position = Vector2(127, 575)
 rotation = -0.75049156
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Color Order" type="RichTextLabel" parent="HUD"]
+anchors_preset = -1
+offset_right = 179.0
+offset_bottom = 102.0
+bbcode_enabled = true
+text = "Gray -> Red -> Blue"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true

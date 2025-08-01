@@ -1,32 +1,34 @@
 [gd_scene load_steps=5 format=3 uid="uid://tmnv6gwts5ed"]
 
-[ext_resource type="Script" uid="uid://ci5k6rd11jcw8" path="res://game/car.gd" id="1_wxpps"]
-[ext_resource type="Script" uid="uid://p0grr10rsqv7" path="res://game/scripts/car_handler.gd" id="2_aks5r"]
+[ext_resource type="Script" uid="uid://y88sa0sy1it8" path="res://game/base_car.gd" id="1_wxpps"]
+[ext_resource type="Script" uid="uid://0uwkek57lk4d" path="res://game/scripts/player_car_handler.gd" id="2_aks5r"]
 [ext_resource type="Texture2D" uid="uid://dvyhmu6cvljqn" path="res://game/assets/art/temp_art/car.svg" id="3_3gv56"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgq61"]
-size = Vector2(103.00002, 61.00003)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wxpps"]
+radius = 28.000008
+height = 117.00005
 
-[node name="Car" type="RigidBody2D"]
+[node name="Car" type="CharacterBody2D"]
 collision_layer = 3
-mass = 80.0
-gravity_scale = 0.0
 script = ExtResource("1_wxpps")
+friction = 100.0
+max_steer = 0.11500000000523869
+engine_power = 239.5350000000035
 metadata/_edit_group_ = true
 
 [node name="CarHandler" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_aks5r")
-metadata/_custom_type_script = "uid://p0grr10rsqv7"
+metadata/_custom_type_script = "uid://0uwkek57lk4d"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.4845815, 0.4845815)
 texture = ExtResource("3_3gv56")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5000005, 0.49999905)
+position = Vector2(1.9999994, 0.50000095)
 scale = Vector2(0.99999976, 0.9999995)
-shape = SubResource("RectangleShape2D_fgq61")
+shape = SubResource("CapsuleShape2D_wxpps")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(135.59, 0)
