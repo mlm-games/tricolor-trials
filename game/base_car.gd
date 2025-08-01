@@ -1,4 +1,4 @@
-class_name Car extends RigidBody2D
+class_name BaseCar extends RigidBody2D
 
 static var I:Car
 
