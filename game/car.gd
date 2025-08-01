@@ -5,9 +5,10 @@ class_name Car extends RigidBody2D
 
 var target_rot : float
 var input_dir : Vector2 = Vector2.ZERO
+var last_dir : Vector2 = Vector2.RIGHT
+
 @onready var car_handler: PlayerInputComponent = %CarHandler
 
-var last_dir : Vector2 = Vector2.RIGHT
 
 func _ready() -> void:
 	car_handler.direction_changed.connect(func(dir): input_dir = dir)

@@ -3,6 +3,11 @@ extends Node #class_name A for Autoload
 
 static var tree : SceneTree = Engine.get_main_loop()
 
+static var game_timer := Timer.new()
+
+static var elapsed_time := 0.0
+
 func  _ready() -> void:
-			print(ProjectSettings.get_global_class_list())
-			print(ProjectSettings.get_global_class_list())
+	add_child(game_timer)
+	game_timer.timeout.connect(func(): elapsed_time += 1)
+	game_timer.start()
