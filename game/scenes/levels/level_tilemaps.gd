@@ -1,7 +1,7 @@
 class_name LevelTileMap extends TileMapLayer
 
 enum LevelType {
-	Base,
+	Gray,
 	Red,
 	Blue
 }

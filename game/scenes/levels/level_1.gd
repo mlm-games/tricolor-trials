@@ -1,5 +1,7 @@
 class_name Level1 extends BaseLevel
 
+
+
 @export var loops_to_win := 2
 
 func _ready() -> void:
@@ -24,3 +26,6 @@ func change_color():
 		
 		tilemap.collision_enabled = false
 		tilemap.visible = false
+	
+	BaseCar.I.modulate = Color("Dark"+Utils.get_color_key_as_string(color_type))
+	BaseCar.I.modulate.h = 0.5

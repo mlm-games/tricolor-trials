@@ -5,7 +5,7 @@
 
 [node name="Level1" instance=ExtResource("1_5s5qv")]
 script = ExtResource("2_q3w70")
-loops_to_win = null
+loops_to_win = 2
 color_order = Array[int]([0, 1])
 
 [node name="LevelArea" parent="." index="0"]
@@ -17,6 +17,7 @@ tile_map_data = PackedByteArray("AAACAAMAAQAEAAQAAAADAAMAAQAEAAQAAAAEAAMAAQAEAAQ
 
 [node name="Car" parent="." index="4"]
 position = Vector2(191, 354)
+rotation = 1.5707964
 
 [node name="FinishLine" parent="." index="5"]
 position = Vector2(1192, 350)

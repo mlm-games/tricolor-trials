@@ -17,6 +17,12 @@ metadata/_edit_use_anchors_ = true
 [node name="BaseLevel" parent="." instance=ExtResource("2_h2f6c")]
 position = Vector2(182, -555)
 
+[node name="LevelArea" parent="BaseLevel" index="0"]
+modulate = Color(0.7921569, 0.94117653, 0.4862745, 1)
+
+[node name="Car" parent="BaseLevel" index="4"]
+modulate = Color(1, 0.61960787, 0.627451, 1)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
