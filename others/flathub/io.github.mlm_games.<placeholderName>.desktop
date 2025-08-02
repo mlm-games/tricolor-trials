@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=<PlaceHolderName>
-GenericName=<PlaceHolderName>
+Name=Tricolor Trials
+GenericName=Tricolor Trials
 Comment=<PlaceholderShortDesc>
-Exec=<placeholdername> %F
-Icon=io.github.mlm_games.<placeholdername>
+Exec=tricolor-trials %F
+Icon=io.github.mlm_games.tricolor-trials
 Terminal=false
 Type=Application
 Categories=<PlaceholderCategories>

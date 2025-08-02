@@ -1,4 +1,4 @@
-name: <placeholdername>
+name: tricolor-trials
 base: core22
 version: '<PlaceHolderVersion>'
 summary: <PlaceHolderShortDesc>
@@ -13,8 +13,8 @@ architectures:
   - build-on: arm64
 
 apps:
-  <placeholdername>:
-    command: <placeholdername>
+  tricolor-trials:
+    command: tricolor-trials
     extensions: [gnome]
     plugs:
       - home
@@ -26,10 +26,10 @@ apps:
       - desktop
       - desktop-legacy
       - unity7
-    desktop: others/snap/gui/<placeholdername>.desktop
+    desktop: others/snap/gui/tricolor-trials.desktop
 
 parts:
-  <placeholdername>:
+  tricolor-trials:
     plugin: dump
     source: ./builds/
     source-type: local
@@ -42,8 +42,8 @@ parts:
       - libpulse0
     override-build: |
       snapcraftctl build
-      chmod +x $SNAPCRAFT_PART_INSTALL/<placeholdername>
+      chmod +x $SNAPCRAFT_PART_INSTALL/tricolor-trials
 
 layout:
-  /usr/share/<placeholdername>:
-    bind: $SNAP/usr/share/<placeholdername>
+  /usr/share/tricolor-trials:
+    bind: $SNAP/usr/share/tricolor-trials

@@ -1,14 +1,14 @@
 $ErrorActionPreference = 'Stop'
 
-$packageName = '<placeholdername>'
+$packageName = 'tricolor-trials'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://github.com/mlm-games/<placeholdername>/releases/download/<PlaceHolderVersion>/<placeholdername>.exe'
+$url = 'https://github.com/mlm-games/tricolor-trials/releases/download/<PlaceHolderVersion>/tricolor-trials.exe'
 
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'EXE'
   url           = $url
-  softwareName  = '<PlaceHolderName>*'
+  softwareName  = 'Tricolor Trials*'
   checksum      = '0000000000000000000000000000000000000000000000000000000000000000'
   checksumType  = 'sha256'
   silentArgs    = "/S"

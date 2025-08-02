@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=<PlaceHolderName>
-GenericName=<PlaceHolderName>
+Name=Tricolor Trials
+GenericName=Tricolor Trials
 Comment=<PlaceholderShortDesc>
-Exec=<placeholdername> %F
+Exec=tricolor-trials %F
 Icon=${SNAP}/meta/gui/icon.png
 Terminal=false
 Type=Application
