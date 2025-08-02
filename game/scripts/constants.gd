@@ -9,7 +9,10 @@ enum BusNames { # Use get string from enum fn
 const PATHS = {
 	CREDITS_SCENE = "uid://bq0gelfcjnqvg",
 	SETTINGS_SCENE = "uid://dp42fom7cc3n0",
-	MENU_SCENE = "uid://ddl5roo03rvdl"
+	MENU_SCENE = "uid://ddl5roo03rvdl",
+	END_SCREEN = "uid://o7bist5hmyv6",
+	LEVEL_SELECT_SCREEN = "uid://bd2uvvgj5debp",
+	LEVEL_SELECT_BUTTON = "uid://cugrjkc77arvj"
 }
 
 const Levels : Dictionary[StringName, StringName] = {

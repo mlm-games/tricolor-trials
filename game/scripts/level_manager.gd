@@ -9,7 +9,7 @@ var current_level_index: int = -1
 
 
 
-func _start_level(new_level: StringName, with_transition := false):
+func _start_level(new_level: StringName, with_transition := true):
 	if with_transition:
 		STransitions.change_scene_with_transition(new_level)
 	else:

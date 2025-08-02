@@ -22,7 +22,7 @@ visible = false
 position = Vector2(1337, 397)
 collision_mask = 2
 script = ExtResource("3_6jg6t")
-connected_blocker = NodePath("../../Blocker")
+connected_blocker = NodePath("../Blocker")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelArea/BlockRemoverButton" index="0"]
@@ -30,6 +30,10 @@ shape = SubResource("CapsuleShape2D_tcijt")
 
 [node name="Sprite2D" type="Sprite2D" parent="LevelArea/BlockRemoverButton" index="1"]
 texture = ExtResource("4_h37ny")
+
+[node name="Blocker" parent="LevelArea" index="1" instance=ExtResource("5_x2s30")]
+position = Vector2(798, 641)
+rotation = 1.5707964
 
 [node name="RedArea" parent="." index="1"]
 visible = true
@@ -41,7 +45,3 @@ position = Vector2(191, 354)
 [node name="FinishLine" parent="." index="5"]
 position = Vector2(1642, 1211)
 rotation = 0.0
-
-[node name="Blocker" parent="." index="6" instance=ExtResource("5_x2s30")]
-position = Vector2(798, 641)
-rotation = 1.5707964

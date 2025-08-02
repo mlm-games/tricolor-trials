@@ -9,12 +9,14 @@ func _ready() -> void:
 	change_color() # To reset all collisions initially
 
 func line_crossed():
-	if loops_to_win == 0:
-		print("level_over")
-	
-	loops_to_win -= 1
 	BaseCar.I.reset_car_pos()
 	change_color()
+	
+	loops_to_win -= 1
+	if loops_to_win == 0:
+		print("level_over"); LevelManager.I.advance_to_next_level()
+	
+
 
 func change_color():
 	var color_type := color_order[FinishLine.I.body_entered_count % color_order.size()]

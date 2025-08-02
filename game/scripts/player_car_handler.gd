@@ -7,6 +7,7 @@ func _init():
 
 @onready var player_car : BaseCar = get_parent()
 
+var _initial_input_given : = false
 signal initial_input_recieved
 
 func _physics_process(delta):
@@ -16,6 +17,10 @@ func _physics_process(delta):
 	player_car.velocity += player_car.transform.y * throttle * player_car.engine_power * delta
 	
 	if player_car.velocity.length() > 5:
+		if !_initial_input_given: 
+			_initial_input_given = true
+			initial_input_recieved.emit()
+		
 		var turn_radius := player_car.wheelbase / tan(player_car.steer_angle) if player_car.steer_angle != 0 else 999999.0
 		var angular_velocity = player_car.velocity.length() / turn_radius
 		player_car.rotation += angular_velocity * delta

@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://cugrjkc77arvj"]
+
+[ext_resource type="Script" uid="uid://2234bw7yeqlu" path="res://game/scenes/ui/level_button.gd" id="1_ljj64"]
+[ext_resource type="Texture2D" uid="uid://b3v3cahrg5tsy" path="res://game/assets/art/award.svg" id="2_lgmis"]
+
+[node name="LevelButton" type="Button"]
+custom_minimum_size = Vector2(223.435, 150)
+pivot_offset = Vector2(111.7175, 75)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ljj64")
+metadata/_custom_type_script = "uid://cmo5qw3rubish"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="RichTextLabel" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+text = "Papamapapampapappa"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="RichTextLabel" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "00:00:00"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Spacer7" type="Control" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_lgmis")
+expand_mode = 5
+
+[node name="Spacer6" type="Control" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1

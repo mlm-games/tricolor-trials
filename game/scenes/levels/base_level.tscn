@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://camikithdj24n"]
+[gd_scene load_steps=10 format=4 uid="uid://camikithdj24n"]
 
 [ext_resource type="TileSet" uid="uid://ci4yy6s854qm2" path="res://game/assets/test-arena-tileset.tres" id="1_864tf"]
 [ext_resource type="Script" uid="uid://d4cf72k68mxsu" path="res://game/scenes/levels/base_level.gd" id="1_lql12"]
@@ -6,6 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://7gjjv4te24ue" path="res://game/scenes/finish_line.tscn" id="3_lldw8"]
 [ext_resource type="Script" uid="uid://lr552nrkeyma" path="res://game/scenes/levels/level_tilemaps.gd" id="3_rcs3o"]
 [ext_resource type="Script" uid="uid://qid2v61q35dt" path="res://game/scenes/levels/color_order.gd" id="6_wdf0w"]
+[ext_resource type="Script" uid="uid://by48sf1o0ofqm" path="res://game/scenes/levels/time_label.gd" id="7_d2vjt"]
+
+[sub_resource type="Theme" id="Theme_wdf0w"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_d2vjt"]
+default_font_size = 25
 
 [node name="BaseLevel" type="Node2D"]
 script = ExtResource("1_lql12")
@@ -47,13 +54,36 @@ rotation = -0.75049156
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="ColorOrder" type="RichTextLabel" parent="HUD"]
-anchors_preset = -1
-offset_right = 179.0
-offset_bottom = 102.0
+[node name="MarginContainer" type="MarginContainer" parent="HUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorOrder" type="RichTextLabel" parent="HUD/MarginContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource("Theme_wdf0w")
 bbcode_enabled = true
 text = "Gray -> Red -> Blue"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("6_wdf0w")
+metadata/_edit_lock_ = true
+
+[node name="TimeLabel" type="RichTextLabel" parent="HUD/MarginContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme = SubResource("Theme_d2vjt")
+bbcode_enabled = true
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_d2vjt")
 metadata/_edit_lock_ = true
