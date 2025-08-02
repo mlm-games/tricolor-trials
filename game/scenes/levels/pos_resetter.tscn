@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqfu50ubq24sp"]
+
+[ext_resource type="Script" uid="uid://ib4msepxwswj" path="res://game/scenes/levels/pos_resetter.gd" id="1_06jad"]
+[ext_resource type="Texture2D" uid="uid://def0fcqsn6s6x" path="res://addons/better-terrain/icons/paint-symmetry/SymmetryRotateClockwise.svg" id="2_06jad"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcijt"]
+radius = 23.0
+height = 46.0
+
+[node name="PositionResetter" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_06jad")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tcijt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_06jad")

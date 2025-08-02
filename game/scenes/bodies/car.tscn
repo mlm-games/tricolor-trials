@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://tmnv6gwts5ed"]
+[gd_scene load_steps=8 format=3 uid="uid://tmnv6gwts5ed"]
 
 [ext_resource type="Script" uid="uid://y88sa0sy1it8" path="res://game/base_car.gd" id="1_wxpps"]
 [ext_resource type="Script" uid="uid://0uwkek57lk4d" path="res://game/scripts/player_car_handler.gd" id="2_aks5r"]
@@ -8,11 +8,48 @@
 radius = 28.000008
 height = 117.00005
 
+[sub_resource type="Animation" id="Animation_wxpps"]
+resource_name = "collided"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.4845815, 0.4845815), Vector2(0.595, 0.41), Vector2(0.4845815, 0.4845815)]
+}
+
+[sub_resource type="Animation" id="Animation_aks5r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4845815, 0.4845815)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3gv56"]
+_data = {
+&"RESET": SubResource("Animation_aks5r"),
+&"collided": SubResource("Animation_wxpps")
+}
+
 [node name="Car" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_wxpps")
 friction = 100.0
-max_steer = 0.11500000000523869
+max_steer = 0.11500000000523868
 engine_power = 239.5350000000035
 metadata/_edit_group_ = true
 
@@ -32,4 +69,11 @@ shape = SubResource("CapsuleShape2D_wxpps")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(135.59, 0)
+zoom = Vector2(0.695, 0.695)
 position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_3gv56")
+}

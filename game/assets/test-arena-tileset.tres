@@ -1,6 +1,11 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ci4yy6s854qm2"]
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://ci4yy6s854qm2"]
 
 [ext_resource type="Texture2D" uid="uid://b8pf6udtts4vd" path="res://game/assets/art/tileset.svg" id="1_40suw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_40suw"]
+rough = true
+bounce = 0.1
+absorbent = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_auctp"]
 resource_name = "arena"
@@ -362,6 +367,7 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 11
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_40suw")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)

@@ -11,7 +11,7 @@ signal initial_input_recieved
 
 func _physics_process(delta):
 	player_car.steer_angle = Input.get_axis("move_left", "move_right") * player_car.max_steer
-	var throttle = Input.get_axis("accelerate", "brake")
+	var throttle := Input.get_axis("accelerate", "brake")
 	
 	player_car.velocity += player_car.transform.y * throttle * player_car.engine_power * delta
 	
@@ -25,5 +25,5 @@ func _physics_process(delta):
 	player_car.velocity = player_car.velocity.minf(player_car.max_speed)
 	player_car.velocity = player_car.velocity.move_toward(Vector2.ZERO, player_car.friction * delta)
 	
-	player_car.move_and_slide()
-	
+	var collision = player_car.move_and_slide()
+	if collision and !player_car.velocity.length() < 20 : player_car.play_collision_anim()
