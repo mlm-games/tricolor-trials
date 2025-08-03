@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddl5roo03rvdl"]
+[gd_scene load_steps=5 format=3 uid="uid://ddl5roo03rvdl"]
 
 [ext_resource type="Script" uid="uid://c2vnr035tqxi6" path="res://game/scenes/ui/menu.gd" id="1_qbs5s"]
 [ext_resource type="Script" uid="uid://cmo5qw3rubish" path="res://addons/my-ecosystem-template/buttons/anim_button.gd" id="2_5ar2c"]
 [ext_resource type="PackedScene" uid="uid://unleulyal7nv" path="res://game/scenes/levels/title_level.tscn" id="2_h2f6c"]
+[ext_resource type="Texture2D" uid="uid://cwysrba2abty5" path="res://game/assets/art/title-bg.svg" id="3_qitgv"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -37,12 +38,19 @@ theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 metadata/_edit_use_anchors_ = true
 
+[node name="TitleBg" type="Sprite2D" parent="UI/MarginContainer"]
+modulate = Color(1, 1, 1, 0.05882353)
+position = Vector2(210.00002, 80.88996)
+scale = Vector2(3.59375, 2.7629013)
+texture = ExtResource("3_qitgv")
+flip_h = true
+
 [node name="Title" type="RichTextLabel" parent="UI/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
 bbcode_enabled = true
-text = "[font_size=50px][outline_size=10][wave]PLACEHOLDER"
+text = "[font_size=50px][outline_size=10][wave][color=darkgray]Tri[/color][color=orange]color[/color][color=lightblue] Trials"
 fit_content = true
 vertical_alignment = 1
 

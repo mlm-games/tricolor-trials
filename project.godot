@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 WindowManager="*res://game/scripts/autoloads/window_manager.gd"
-STransitions="*res://addons/my-ecosystem-template/transitions/screen_transitions.tscn"
+STransitions="*res://addons/my-ecosystem-template/transitions/scene_transition_manager.tscn"
 SettingsManager="*res://addons/basic_settings_menu/settings_manager.gd"
 SettingsApplier="*res://addons/basic_settings_menu/settings_applier.gd"
 UiAudioM="*res://addons/my-ecosystem-template/managers/audio/ui_audio_manager.gd"
@@ -40,6 +40,7 @@ enabled=PackedStringArray("res://addons/basic_settings_menu/plugin.cfg", "res://
 
 [gui]
 
+theme/custom="uid://ddvmxmwyoi48g"
 theme/custom_font="uid://dmvkvc82ltc7s"
 
 [input]

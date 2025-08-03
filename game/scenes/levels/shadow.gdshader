@@ -22,7 +22,6 @@ vec4 sample_blurred_shadow(sampler2D tex, vec2 uv, vec2 pixel_size) {
 void fragment() {
     vec4 base_color = texture(TEXTURE, UV);
     
-    // Use TEXTURE_PIXEL_SIZE instead of SCREEN_PIXEL_SIZE
     vec4 shadow_sample;
     if (use_blur) {
         shadow_sample = sample_blurred_shadow(TEXTURE, UV, TEXTURE_PIXEL_SIZE);
