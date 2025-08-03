@@ -11,7 +11,7 @@ const SAVE_PATH = "user://savegame.dat"
 ## The password for encryption.
 ##[br]
 ## @deprecated: Using a hardcoded password is NOT secure for a released game. This is for demonstration only.
-const ENCRYPTION_KEY = "your_password"
+const ENCRYPTION_KEY = "your_password" #Doesn't matter for small games, basic sec. comes inbuilt if needed
 
 
 ## Saves game data to an encrypted file.

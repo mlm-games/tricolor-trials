@@ -112,4 +112,4 @@ locale/translations=PackedStringArray("res://locale/translations.ar.translation"
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
-environment/defaults/default_clear_color=Color(0.230449, 0.473537, 0.268498, 1)
+environment/defaults/default_clear_color=Color(0.2058672, 0.4279634, 0.23815407, 1)

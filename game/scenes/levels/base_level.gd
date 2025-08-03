@@ -5,6 +5,8 @@ static var I: BaseLevel
 func _init() -> void:
 	I = self
 
+signal level_over
+
 @onready var level_id = name.to_upper() 
 
 @export var color_order : Array[LevelTileMap.LevelType] = [LevelTileMap.LevelType.Gray]

@@ -1,7 +1,5 @@
 class_name Level1 extends BaseLevel
 
-
-
 @export var loops_to_win := 2
 
 func _ready() -> void: #overridden
@@ -22,7 +20,7 @@ func level_completed():
 	var time_slow_tween := create_tween().set_trans(Tween.TRANS_CUBIC).set_ignore_time_scale()
 	time_slow_tween.tween_property(Engine, "time_scale", 0.7, 0.3)
 	#time_slow_tween.tween_property()
-	print("level_over");# LevelManager.I.advance_to_next_level()
+	level_over.emit(); print("level_over");# LevelManager.I.advance_to_next_level()
 
 
 func change_color():
