@@ -5,6 +5,7 @@ class_name Level1 extends BaseLevel
 func _ready() -> void: #overridden
 	FinishLine.I.crossed.connect(line_crossed)
 	change_color() # To reset all collisions initially
+	%LevelLabel.text = level_id.capitalize()
 
 func line_crossed():
 	BaseCar.I.reset_car_pos()

@@ -27,7 +27,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 80
+theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 metadata/_edit_use_anchors_ = true
 
@@ -52,6 +52,19 @@ vertical_alignment = 1
 script = ExtResource("6_wdf0w")
 metadata/_edit_lock_ = true
 
+[node name="LevelLabel" type="RichTextLabel" parent="HUD/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "Level 1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TimeLabel" type="RichTextLabel" parent="HUD/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
@@ -61,7 +74,7 @@ mouse_filter = 2
 bbcode_enabled = true
 text = "00:00:000"
 fit_content = true
-horizontal_alignment = 2
+horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("8_ilaxg")
 metadata/_custom_type_script = "uid://by48sf1o0ofqm"
