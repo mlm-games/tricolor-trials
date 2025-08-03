@@ -63,10 +63,10 @@ size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
-text = "Sound Effects and BGM - 99sounds
-Kenney - Art
-
-(All are royalty-free / CC0)"
+bbcode_enabled = true
+text = "Kenney - Interface sounds
+BGM - [url=https://pixabay.com/music/smooth-jazz-smooth-jazz-travel-vlog-podcast-music-290508/] Smooth Jazz Music by Denis Pavlov
+"
 fit_content = true
 horizontal_alignment = 1
 
