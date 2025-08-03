@@ -1,8 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://tmnv6gwts5ed"]
+[gd_scene load_steps=17 format=3 uid="uid://tmnv6gwts5ed"]
 
 [ext_resource type="Script" uid="uid://y88sa0sy1it8" path="res://game/base_car.gd" id="1_wxpps"]
 [ext_resource type="Script" uid="uid://0uwkek57lk4d" path="res://game/scripts/player_car_handler.gd" id="2_aks5r"]
 [ext_resource type="Texture2D" uid="uid://dvyhmu6cvljqn" path="res://game/assets/art/temp_art/car.svg" id="3_3gv56"]
+[ext_resource type="AudioStream" uid="uid://bl078qqfgye1l" path="res://game/assets/sounds/kenney_interface-sounds/Audio/scroll_001.ogg" id="4_aks5r"]
+[ext_resource type="Script" uid="uid://dpmq44rrcespl" path="res://game/scenes/bodies/engine_sound.gd" id="5_3gv56"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wxpps"]
 radius = 28.000008
@@ -120,3 +122,12 @@ libraries = {
 position = Vector2(-7.69, 65.095)
 texture = SubResource("GradientTexture2D_aks5r")
 process_material = SubResource("ParticleProcessMaterial_kc6gm")
+
+[node name="EngineSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_aks5r")
+volume_db = -24.233
+pitch_scale = 0.5
+autoplay = true
+bus = &"Sfx"
+script = ExtResource("5_3gv56")

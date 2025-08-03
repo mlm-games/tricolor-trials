@@ -22,14 +22,19 @@ var last_dir : Vector2 = Vector2.RIGHT
 
 @onready var initial_position = global_position
 @onready var car_handler: PlayerCarHandler = %CarHandler
-
+@onready var engine_sound: AudioStreamPlayer2D = %EngineSound
 
 func _ready() -> void:
 	reset_car_pos()
 
+#func _process(delta: float) -> void:
+	#engine_sound.pitch_scale = velocity.length() / max_speed
+
 func play_collision_anim():
+	if !%AnimationPlayer.is_playing():
+		AudioM.play_sound_varied(preload("uid://bk5o3y3kmxgdh"))
 	%AnimationPlayer.play("collided")
-	AudioM.play_sound_varied(preload("uid://bk5o3y3kmxgdh"))
+	
 	
 
 func reset_car_pos():

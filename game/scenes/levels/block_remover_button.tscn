@@ -6,7 +6,6 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcijt"]
 
 [node name="BlockRemoverButton" type="Area2D"]
-visible = false
 collision_mask = 2
 script = ExtResource("1_e077t")
 metadata/_edit_group_ = true
