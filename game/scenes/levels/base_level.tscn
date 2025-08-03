@@ -5,14 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://tmnv6gwts5ed" path="res://game/scenes/bodies/car.tscn" id="2_lldw8"]
 [ext_resource type="PackedScene" uid="uid://7gjjv4te24ue" path="res://game/scenes/finish_line.tscn" id="3_lldw8"]
 [ext_resource type="Script" uid="uid://lr552nrkeyma" path="res://game/scenes/levels/level_tilemaps.gd" id="3_rcs3o"]
+[ext_resource type="Script" uid="uid://jlty2ro3hxdt" path="res://shadow_component.gd" id="4_d2vjt"]
 [ext_resource type="Script" uid="uid://qid2v61q35dt" path="res://game/scenes/levels/color_order.gd" id="6_wdf0w"]
-[ext_resource type="Script" uid="uid://by48sf1o0ofqm" path="res://game/scenes/levels/time_label.gd" id="7_d2vjt"]
+[ext_resource type="Script" uid="uid://by48sf1o0ofqm" path="res://game/scenes/levels/time_label.gd" id="8_ilaxg"]
 
 [sub_resource type="Theme" id="Theme_wdf0w"]
-default_font_size = 25
-
-[sub_resource type="Theme" id="Theme_d2vjt"]
-default_font_size = 25
 
 [node name="BaseLevel" type="Node2D"]
 script = ExtResource("1_lql12")
@@ -22,6 +19,11 @@ tile_map_data = PackedByteArray("AAACAAMAAQAEAAQAAAADAAMAAQAEAAQAAAAEAAMAAQAEAAQ
 tile_set = ExtResource("1_864tf")
 script = ExtResource("3_rcs3o")
 metadata/_custom_type_script = "uid://lr552nrkeyma"
+
+[node name="TilemapShadowComponent" type="Node2D" parent="LevelArea"]
+z_index = -1
+script = ExtResource("4_d2vjt")
+metadata/_custom_type_script = "uid://jlty2ro3hxdt"
 
 [node name="RedArea" type="TileMapLayer" parent="."]
 visible = false
@@ -33,6 +35,11 @@ script = ExtResource("3_rcs3o")
 type = 1
 metadata/_custom_type_script = "uid://lr552nrkeyma"
 
+[node name="TilemapShadowComponent" type="Node2D" parent="RedArea"]
+z_index = -1
+script = ExtResource("4_d2vjt")
+metadata/_custom_type_script = "uid://jlty2ro3hxdt"
+
 [node name="BlueArea" type="TileMapLayer" parent="."]
 visible = false
 modulate = Color(0.43137255, 0.5803922, 0.70588243, 1)
@@ -43,14 +50,19 @@ script = ExtResource("3_rcs3o")
 type = 2
 metadata/_custom_type_script = "uid://lr552nrkeyma"
 
-[node name="Decorations" type="TileMapLayer" parent="."]
+[node name="TilemapShadowComponent" type="Node2D" parent="BlueArea"]
+z_index = -1
+script = ExtResource("4_d2vjt")
+metadata/_custom_type_script = "uid://jlty2ro3hxdt"
 
-[node name="Car" parent="." instance=ExtResource("2_lldw8")]
-position = Vector2(193, 252)
+[node name="Decorations" type="TileMapLayer" parent="."]
 
 [node name="FinishLine" parent="." instance=ExtResource("3_lldw8")]
 position = Vector2(127, 575)
 rotation = -0.75049156
+
+[node name="Car" parent="." instance=ExtResource("2_lldw8")]
+position = Vector2(193, 252)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -60,13 +72,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 20
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorOrder" type="RichTextLabel" parent="HUD/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="ColorOrder" type="RichTextLabel" parent="HUD/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 theme = SubResource("Theme_wdf0w")
 bbcode_enabled = true
 text = "Gray -> Red -> Blue"
@@ -75,15 +98,16 @@ vertical_alignment = 1
 script = ExtResource("6_wdf0w")
 metadata/_edit_lock_ = true
 
-[node name="TimeLabel" type="RichTextLabel" parent="HUD/MarginContainer"]
-custom_minimum_size = Vector2(300, 100)
+[node name="TimeLabel" type="RichTextLabel" parent="HUD/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 10
 size_flags_vertical = 0
-theme = SubResource("Theme_d2vjt")
+mouse_filter = 2
 bbcode_enabled = true
-text = "00:00:00"
+text = "00:00:000"
+fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("7_d2vjt")
-metadata/_edit_lock_ = true
+script = ExtResource("8_ilaxg")
+metadata/_custom_type_script = "uid://by48sf1o0ofqm"
