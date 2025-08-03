@@ -31,4 +31,4 @@ func _process(_delta):
 func _stop_timer_wave_and_save():
 	is_timing = false
 	text = "[wave]"+ text
-	SaveData.LevelData[BaseLevel.I.level_id] = elapsed_ms
+	SaveData.level_data[BaseLevel.I.level_id] = elapsed_ms

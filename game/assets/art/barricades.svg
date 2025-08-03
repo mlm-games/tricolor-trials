@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="barricades.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="3.390625"
+     inkscape:cx="67.24424"
+     inkscape:cy="52.0553"
+     inkscape:window-width="1536"
+     inkscape:window-height="902"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g11">
+      <rect
+         style="fill:#cccccc;stroke:#000000;stroke-width:6.52916;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         id="rect2"
+         width="38.889214"
+         height="105.20576"
+         x="44.997791"
+         y="12.871776" />
+      <path
+         id="path4"
+         style="display:inline;fill:#ffcaca;fill-opacity:1;stroke:#000000;stroke-width:5.13233;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         d="M 84.076552,57.668897 64.442355,51.6845 44.808152,57.668897 V 45.732384 l 19.634203,-5.984409 19.634197,5.984409 z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         id="path5"
+         style="display:inline;fill:#ffcaca;fill-opacity:1;stroke:#000000;stroke-width:5.13233;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         d="M 84.076552,37.668897 64.442355,31.6845 44.808152,37.668897 V 25.732384 l 19.634203,-5.984409 19.634197,5.984409 z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         id="path6"
+         style="display:inline;fill:#ffcaca;fill-opacity:1;stroke:#000000;stroke-width:5.13233;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         d="M 84.266191,73.720247 64.631994,79.704644 44.997791,73.720247 V 85.65676 l 19.634203,5.984409 19.634197,-5.984409 z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         id="path7"
+         style="display:inline;fill:#ffcaca;fill-opacity:1;stroke:#000000;stroke-width:5.13233;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+         d="M 84.266191,93.720247 64.631994,99.704644 44.997791,93.720247 v 11.936513 l 19.634203,5.98441 19.634197,-5.98441 z"
+         sodipodi:nodetypes="ccccccc" />
+    </g>
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -19,9 +19,15 @@ func level_completed():
 	#show_completion_popup() #TODO
 	var time_slow_tween := create_tween().set_trans(Tween.TRANS_CUBIC).set_ignore_time_scale()
 	time_slow_tween.tween_property(Engine, "time_scale", 0.7, 0.3)
-	#time_slow_tween.tween_property()
-	level_over.emit(); print("level_over");# LevelManager.I.advance_to_next_level()
+	time_slow_tween.parallel().tween_property(%CompleteLabel, "modulate:a", 1.0, 0.3)
+	var old_pos = %CompleteLabel.position.y
+	time_slow_tween.parallel().tween_property(%CompleteLabel, "position:y", old_pos, 1.0).from(800)
+	time_slow_tween.tween_interval(3)
+	time_slow_tween.tween_callback(Engine.set_time_scale.bind(1))
+	time_slow_tween.tween_callback(LevelManager.I.advance_to_next_level)
 
+	#time_slow_tween.tween_property()
+	level_over.emit(); print("level_over")
 
 func change_color():
 	var color_type := color_order[FinishLine.I.body_entered_count % color_order.size()]

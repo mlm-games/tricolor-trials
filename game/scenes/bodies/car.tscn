@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://tmnv6gwts5ed"]
+[gd_scene load_steps=15 format=3 uid="uid://tmnv6gwts5ed"]
 
 [ext_resource type="Script" uid="uid://y88sa0sy1it8" path="res://game/base_car.gd" id="1_wxpps"]
 [ext_resource type="Script" uid="uid://0uwkek57lk4d" path="res://game/scripts/player_car_handler.gd" id="2_aks5r"]
@@ -45,6 +45,44 @@ _data = {
 &"collided": SubResource("Animation_wxpps")
 }
 
+[sub_resource type="Gradient" id="Gradient_wxpps"]
+interpolation_mode = 1
+colors = PackedColorArray(0.12658027, 0.35656554, 0.40737742, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aks5r"]
+gradient = SubResource("Gradient_wxpps")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5265487, 0.5176991)
+
+[sub_resource type="Gradient" id="Gradient_3gv56"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0tu1y"]
+gradient = SubResource("Gradient_3gv56")
+
+[sub_resource type="Curve" id="Curve_lfcwq"]
+_data = [Vector2(0, 0.5393259), 0.0, 0.0, 0, 0, Vector2(0.13636363, 1), 0.0, 0.0, 0, 0, Vector2(0.9924243, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jx53y"]
+curve = SubResource("Curve_lfcwq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kc6gm"]
+particle_flag_disable_z = true
+angle_min = -288.4
+angle_max = 415.1
+inherit_velocity_ratio = 0.642
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 70.59
+initial_velocity_max = 70.59
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_jx53y")
+color = Color(0.83, 0.83, 0.83, 1)
+color_ramp = SubResource("GradientTexture1D_0tu1y")
+hue_variation_min = -0.13000003
+hue_variation_max = 0.10999998
+
 [node name="Car" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_wxpps")
@@ -77,3 +115,8 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_3gv56")
 }
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-7.69, 65.095)
+texture = SubResource("GradientTexture2D_aks5r")
+process_material = SubResource("ParticleProcessMaterial_kc6gm")

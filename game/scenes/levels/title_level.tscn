@@ -37,6 +37,21 @@ metadata/_custom_type_script = "uid://lr552nrkeyma"
 
 [node name="Decorations" type="TileMapLayer" parent="."]
 
+[node name="TutorialText" type="RichTextLabel" parent="."]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 452.0
+offset_top = 885.0
+offset_right = 631.0
+offset_bottom = 987.0
+grow_horizontal = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[wave]WASD to drive"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Car" parent="." instance=ExtResource("4_xhb0w")]
 position = Vector2(528, 1057)
 max_speed = 99999999.0
