@@ -7,7 +7,7 @@
 
 [node name="Level6" instance=ExtResource("1_66s5f")]
 script = ExtResource("2_xodr1")
-loops_to_win = 3
+loops_to_win = 5
 color_order = Array[int]([0, 2, 1, 2, 0])
 
 [node name="LevelArea" parent="." index="2"]
@@ -21,7 +21,6 @@ rotation = 0.7853982
 scale = Vector2(1.78, 1.78)
 
 [node name="BlockRemoverButton2" parent="LevelArea" index="1" node_paths=PackedStringArray("connected_blocker") instance=ExtResource("3_08a3h")]
-visible = true
 position = Vector2(1304, 631)
 connected_blocker = NodePath("../Blocker")
 
@@ -38,7 +37,6 @@ rotation = 0.7853982
 scale = Vector2(1.78, 1.78)
 
 [node name="BlockRemoverButton3" parent="BlueArea" index="1" node_paths=PackedStringArray("connected_blocker") instance=ExtResource("3_08a3h")]
-visible = true
 position = Vector2(487, 1188)
 connected_blocker = NodePath("../Blocker2")
 
