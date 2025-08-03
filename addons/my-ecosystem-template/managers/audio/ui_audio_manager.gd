@@ -3,8 +3,8 @@
 extends Node
 
 # Sound Resources (cannot be configured in the inspector, as of 4.4, so set it later here)
-@export var default_click_sound: AudioStream
-@export var default_hover_sound: AudioStream
+@export var default_click_sound: AudioStream = preload("uid://bg60mf3wlo6bn")
+@export var default_hover_sound: AudioStream = preload("uid://c56n1usauxbdf")
 
 # Internal Player Pool
 const POOL_SIZE = 5 # UI sounds are less frequent, so a smaller pool is fine

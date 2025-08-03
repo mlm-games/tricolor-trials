@@ -15,3 +15,4 @@ func  _ready() -> void:
 func _on_body_crossed(_body):
 	body_entered_count += 1
 	crossed.emit()
+	AudioM.play_sound_varied(preload("uid://b0ndrdxq2mm2v"))

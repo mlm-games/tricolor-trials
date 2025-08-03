@@ -16,6 +16,7 @@ func line_crossed():
 	
 
 func level_completed():
+	AudioM.play_sound_varied(preload("uid://cik2m1tstljua"))
 	#show_completion_popup() #TODO
 	var time_slow_tween := create_tween().set_trans(Tween.TRANS_CUBIC).set_ignore_time_scale()
 	time_slow_tween.tween_property(Engine, "time_scale", 0.7, 0.3)

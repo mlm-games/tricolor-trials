@@ -32,3 +32,6 @@ const Levels : Dictionary[StringName, StringName] = {
 	#Level13
 	#Level14
 }
+
+
+const BlockerButtonSound = preload("uid://csoikfbixp04q")

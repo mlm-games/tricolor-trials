@@ -23,7 +23,7 @@ size_flags_vertical = 0
 mouse_filter = 2
 theme = SubResource("Theme_wdf0w")
 bbcode_enabled = true
-text = "The above represents the order of color-maps (crossing the finish line switches to the next one)"
+text = "Take a look up here!"
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 

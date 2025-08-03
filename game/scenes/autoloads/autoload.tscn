@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://h30mob8qlss4"]
+[gd_scene load_steps=4 format=3 uid="uid://h30mob8qlss4"]
 
 [ext_resource type="Script" uid="uid://ixpppcuhpbdm" path="res://game/scenes/autoloads/autoload.gd" id="1_f5mab"]
 [ext_resource type="Script" uid="uid://dw0w736psvfpc" path="res://game/scripts/level_manager.gd" id="2_i55hh"]
+[ext_resource type="AudioStream" uid="uid://djiwdn0xq4l1j" path="res://game/assets/sounds/kenney_interface-sounds/smooth-jazz-travel-vlog-podcast-music-290508.mp3" id="3_o80ch"]
 
 [node name="Autoload" type="Node"]
 script = ExtResource("1_f5mab")
@@ -9,3 +10,10 @@ script = ExtResource("1_f5mab")
 [node name="LevelManager" type="Node" parent="."]
 script = ExtResource("2_i55hh")
 metadata/_custom_type_script = "uid://dw0w736psvfpc"
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_o80ch")
+volume_db = -2.13
+autoplay = true
+bus = &"Music"
+parameters/looping = true

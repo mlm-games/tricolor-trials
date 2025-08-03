@@ -3,6 +3,7 @@ class_name Blocker extends StaticBody2D
 @onready var collision_shape_2d = $CollisionShape2D
 
 #func _ready() -> void:
+	
 	#visibility_changed.connect(collision_shape_2d.set_deferred.bind("disabled", is_visible_in_tree()))
 	#visibility_changed.connect(func(): await get_tree().process_frame; print(collision_shape_2d.disabled))
 ##

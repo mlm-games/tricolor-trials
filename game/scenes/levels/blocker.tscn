@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddcr1to4mvc7k"]
+[gd_scene load_steps=7 format=3 uid="uid://ddcr1to4mvc7k"]
 
 [ext_resource type="Script" uid="uid://i6fpkg20osb3" path="res://game/scenes/levels/blocker.gd" id="1_0uatm"]
 [ext_resource type="Texture2D" uid="uid://dpvyi3xtsco4d" path="res://game/assets/art/barricades.svg" id="2_0uatm"]
+[ext_resource type="Shader" uid="uid://eqcqi4xc7fak" path="res://game/scenes/levels/flash_white.gdshader" id="2_k8i86"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u4id7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1gb37"]
 height = 218.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_81aep"]
+shader = ExtResource("2_k8i86")
 
 [node name="Blocker" type="StaticBody2D"]
 collision_layer = 33
@@ -19,6 +23,9 @@ metadata/_edit_group_ = true
 shape = SubResource("CapsuleShape2D_1gb37")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_81aep")
 position = Vector2(0, -5.000004)
 scale = Vector2(1, 2.109375)
 texture = ExtResource("2_0uatm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

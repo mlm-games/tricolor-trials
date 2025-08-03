@@ -29,6 +29,7 @@ func _ready() -> void:
 
 func play_collision_anim():
 	%AnimationPlayer.play("collided")
+	AudioM.play_sound_varied(preload("uid://bk5o3y3kmxgdh"))
 	
 
 func reset_car_pos():

@@ -12,7 +12,6 @@ bg_color = Color(1, 1, 1, 1)
 process_mode = 3
 top_level = true
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 2.0
@@ -62,6 +61,7 @@ current_tab = 1
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 10
 metadata/_tab_index = 0
 
@@ -87,6 +87,7 @@ metadata/_edit_use_anchors_ = true
 [node name="MENU_OPTIONS_GAMEPLAY" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 10
 metadata/_tab_index = 1
 
@@ -112,6 +113,7 @@ theme_override_constants/separation = 20
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 10
 metadata/_tab_index = 2
 
@@ -136,6 +138,7 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 10
 metadata/_tab_index = 3
 
