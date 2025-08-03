@@ -1,6 +1,6 @@
 name: tricolor-trials
 base: core22
-version: '<PlaceHolderVersion>'
+version: '0.2.0'
 summary: <PlaceHolderShortDesc>
 description: |
   <PlaceHolderLongDesc>

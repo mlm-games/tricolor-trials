@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tricolor-trials</id>
-    <version><PlaceHolderVersion></version>
+    <version>0.2.0</version>
     <title>Tricolor Trials</title>
     <authors>mlmstudios</authors>
     <projectUrl>https://github.com/mlm-games/tricolor-trials</projectUrl>
     <licenseUrl>https://github.com/mlm-games/tricolor-trials/blob/main/LICENSE</licenseUrl>
-    <iconUrl>https://cdn.statically.io/gh/mlm-games/tricolor-trials/<PlaceHolderVersion>/fastlane/metadata/android/en-US/images/icon.png</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/mlm-games/tricolor-trials/0.2.0/fastlane/metadata/android/en-US/images/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><PlaceHolderLongDesc></description>
     <summary><PlaceHolderShortDesc></summary>

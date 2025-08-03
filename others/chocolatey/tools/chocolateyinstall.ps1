@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 $packageName = 'tricolor-trials'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://github.com/mlm-games/tricolor-trials/releases/download/<PlaceHolderVersion>/tricolor-trials.exe'
+$url = 'https://github.com/mlm-games/tricolor-trials/releases/download/0.2.0/tricolor-trials.exe'
 
 $packageArgs = @{
   packageName   = $packageName
