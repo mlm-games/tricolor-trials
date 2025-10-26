@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Tricolor Trials
 GenericName=Tricolor Trials
-Comment=<PlaceholderShortDesc>
+Comment=Complete laps that change based on color!
 Exec=tricolor-trials %F
 Icon=io.github.mlm_games.tricolor-trials
 Terminal=false
 Type=Application
-Categories=<PlaceholderCategories>
+Categories=Game;Amusement
