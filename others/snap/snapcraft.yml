@@ -1,9 +1,9 @@
 name: tricolor-trials
 base: core22
-version: '0.2.0'
-summary: <PlaceHolderShortDesc>
+version: '0.1.4'
+summary: Complete color changing laps!
 description: |
-  <PlaceHolderLongDesc>
+  A car looper where the colored blocks change based on the lap. 
 
 grade: stable
 confinement: strict
@@ -16,17 +16,7 @@ apps:
   tricolor-trials:
     command: tricolor-trials
     extensions: [gnome]
-    plugs:
-      - home
-      - removable-media
-      - network
-      - opengl
-      - x11
-      - wayland
-      - desktop
-      - desktop-legacy
-      - unity7
-    desktop: others/snap/gui/tricolor-trials.desktop
+    plugs: [home, network, removable-media, unity7]
 
 parts:
   tricolor-trials:
